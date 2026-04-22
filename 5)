@@ -1,0 +1,39 @@
+class Estudiante:
+    def __init__(self, nombre, edad):
+        """Inicializa los datos del estudiante."""
+        self.nombre = nombre
+        self.edad = edad
+        self.notas = []
+
+    def agregar_nota(self, nota):
+        """Agrega una nota a la lista."""
+        if 0 <= nota <= 10:
+            self.notas.append(nota)
+            print(f"Nota {nota} agregada correctamente.")
+        else:
+            print("La nota debe estar entre 0 y 10.")
+
+    def calcular_promedio(self):
+        """Calcula y devuelve el promedio de las notas."""
+        if len(self.notas) == 0:
+            return 0
+        return sum(self.notas) / len(self.notas)
+
+    def mostrar_info(self):
+        """Muestra la información del estudiante."""
+        print(f"Nombre: {self.nombre}")
+        print(f"Edad: {self.edad}")
+        print(f"Notas: {self.notas}")
+        print(f"Promedio: {self.calcular_promedio():.2f}")
+
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    estudiante1 = Estudiante("Lucas", 20)
+
+    estudiante1.agregar_nota(8)
+    estudiante1.agregar_nota(7)
+    estudiante1.agregar_nota(9)
+
+    print("\nInformación del estudiante:")
+    estudiante1.mostrar_info()
