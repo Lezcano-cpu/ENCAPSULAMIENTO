@@ -1,0 +1,52 @@
+class Auto:
+    def __init__(self, marca, modelo, anio):
+        """Inicializa las propiedades del auto."""
+        self.marca = marca
+        self.modelo = modelo
+        self.anio = anio
+
+    def obtener_marca(self):
+        """Devuelve la marca del auto."""
+        return self.marca
+
+    def establecer_marca(self, marca):
+        """Establece una nueva marca."""
+        self.marca = marca
+
+    def obtener_modelo(self):
+        """Devuelve el modelo del auto."""
+        return self.modelo
+
+    def establecer_modelo(self, modelo):
+        """Establece un nuevo modelo."""
+        self.modelo = modelo
+
+    def obtener_anio(self):
+        """Devuelve el año del auto."""
+        return self.anio
+
+    def establecer_anio(self, anio):
+        """Establece un nuevo año."""
+        self.anio = anio
+
+    def mostrar_info(self):
+        """Muestra la información del auto en formato legible."""
+        print(f"Auto: {self.marca} {self.modelo} ({self.anio})")
+
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    # Crear un auto
+    auto1 = Auto("Toyota", "Corolla", 2020)
+
+    # Mostrar información
+    auto1.mostrar_info()
+
+    # Cambiar datos
+    auto1.establecer_marca("Ford")
+    auto1.establecer_modelo("Focus")
+    auto1.establecer_anio(2022)
+
+    # Mostrar información actualizada
+    print("\nDespués de actualizar:")
+    auto1.mostrar_info()
