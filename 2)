@@ -1,0 +1,30 @@
+class Persona:
+    def __init__(self, nombre, edad, sexo):
+        """Inicializa las propiedades de la persona."""
+        self.nombre = nombre
+        self.edad = edad
+        self.sexo = sexo
+
+    def cambiar_edad(self, nueva_edad):
+        """Cambia la edad de la persona."""
+        self.edad = nueva_edad
+
+    def mostrar_info(self):
+        """Muestra la información de la persona."""
+        print(f"Nombre: {self.nombre}")
+        print(f"Edad: {self.edad}")
+        print(f"Sexo: {self.sexo}")
+
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    persona1 = Persona("Ana", 25, "Femenino")
+
+    # Mostrar datos
+    persona1.mostrar_info()
+
+    # Cambiar edad
+    persona1.cambiar_edad(26)
+
+    print("\nDespués de actualizar la edad:")
+    persona1.mostrar_info()
